@@ -1,0 +1,43 @@
+<%- include('./partials/header') %>
+
+<div class="container">
+    <button id='enable-webcam'>Access your webcam</button>
+    <div class="row main">
+        <div class=" order-1 col-lg-8 col-12" id="liveView">
+            <!-- webcam video -->
+            <video id="webcam" autoplay width="640" height="480" style="display: none;"></video>
+            <!-- canvas -->
+            <canvas id="canvas" width="637" height="477" style="display: none;"></canvas>
+        </div>
+        <div class="order-lg-3 order-2 col-12" id="instruction-box" style="display: none;">
+            <div>
+                <h2 id='form-coach-says'>Form coach says..</h2>
+            </div>
+            <hr id="form-judge-hr">
+            <div>
+                <p id='extensive-instruction'>I'm watching!</p>
+            </div>
+        </div>
+        <div class="order-lg-2 order-3 col-lg-3 ml-auto col-12" id="exercises-div" style="display: none;">
+            
+            <button class='exercise-options' name='curl' data-exercise="curl">Bicep Curl</button>
+            
+            <button class='exercise-options' name='pushup' data-exercise="pushup">Push Up</button>
+            
+            <button class='exercise-options' name='squat' data-exercise="squat">Squat</button>
+        </div>
+    </div>
+    <!-- <div id='tutorial-overlay'>
+        <div id='tutorial-box'>
+            <button id='close-tutorial-overlay'>X</button>
+            <p>This soon will be an overlay tutorial</p>
+        </div>
+    </div> -->
+    
+    <h1>Let's see your form!</h1>
+    <a href="/" class="btn btn-primary">Back to home page</a>
+</div>
+
+<script src="/functionality/fixform.js"></script>
+
+<%- include('./partials/footer') %> 
