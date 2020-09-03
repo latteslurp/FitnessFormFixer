@@ -1,4 +1,4 @@
-This is a fitness form fixer app. It will predict your form (whole body as an input) through live webcam and tells you whether you are performing a certain exercise correctly or not. The prediction is based on classification neural network from a pre-trained model.
+This is a fitness form fixer app. The app offers various exercises you can choose, it will predict your form (whole body as an input) through your device's live webcam whether the exercise is being performed correctly or not. The prediction is based on neural network classification from a pre-trained model.
 
 Current exercises (features) available:
 - curl (bicep curl)
