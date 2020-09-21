@@ -9,33 +9,56 @@
             <!-- canvas -->
             <canvas id="canvas" width="637" height="477" style="display: none;"></canvas>
         </div>
-        <div class="order-lg-3 order-2 col-12" id="instruction-box" style="display: none;">
-            <div>
-                <h2 id='form-coach-says'>Form coach says..</h2>
+        <div class="order-2 col-lg-4 col-12" id="instruction-box" style="display: none;">
+            <div id="form-coach">
+                <div>
+                    <h2 id='form-coach-says'>Form coach says..</h2>
+                </div>
+                <hr id="form-judge-hr">
+                <div>
+                    <p id='extensive-instruction'>Hello! Make sure to face the webcam and position yourself at around the center of the webcam as you do the workout. I'm watching!</p>
+                </div>
             </div>
-            <hr id="form-judge-hr">
             <div>
-                <p id='extensive-instruction'>I'm watching!</p>
+                <button class="btn" id='finish-workout'>Finish Workout</button>
             </div>
         </div>
-        <div class="order-lg-2 order-3 col-lg-3 ml-auto col-12" id="exercises-div" style="display: none;">
+        <div class="order-3 col-lg-4 col-12" id="exercises-div" style="display: none;">
             
-            <button class='exercise-options' name='curl' data-exercise="curl">Bicep Curl</button>
+            <button class='btn exercise-options' name='curl' data-exercise="curl">Bicep Curl</button>
             
-            <button class='exercise-options' name='pushup' data-exercise="pushup">Push Up</button>
+            <button class='btn exercise-options' name='pushup' data-exercise="pushup">Push Up</button>
             
-            <button class='exercise-options' name='squat' data-exercise="squat">Squat</button>
+            <button class='btn exercise-options' name='squat' data-exercise="squat">Squat</button>
         </div>
     </div>
-    <!-- <div id='tutorial-overlay'>
-        <div id='tutorial-box'>
-            <button id='close-tutorial-overlay'>X</button>
-            <p>This soon will be an overlay tutorial</p>
+    <div id='performance-overlay' style="width:0%; display: none;">
+        <div id='performance-box'>
+            <button class="btn" id='close-performance-overlay'><i class="fas fa-window-close fa-2x"></i></button>
+            <h1 id='header-performance-overlay'>Your Performance</h1>
+            <p id='text-performance-overlay'>Here's your result.</p>
+            <div id='svg'>
+                <div id="tut-graph"></div>
+                <div id="overall-graph">
+                    <div id="color-score">
+                        <div id='above9-score'></div>
+                        <div id='above8-score'></div>
+                        <div id='below2-score'></div>
+                        <div id='below1-score'></div>
+                    </div>
+                    <div id='description-score'>
+                        <p class="desc-score">score >= 9</p>
+                        <p class="desc-score">8 >= score > 9</p>
+                        <p class="desc-score">1 &lt;= score &lt; 2</p>
+                        <p class="desc-score">score &lt; 1</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div> -->
+    </div>
     
     <h1>Let's see your form!</h1>
-    <a href="/" class="btn btn-primary">Back to home page</a>
+    <a href="/" class="btn btn-sm btn-primary">Back to home page</a>
 </div>
 
 <script src="/functionality/fixform.js"></script>

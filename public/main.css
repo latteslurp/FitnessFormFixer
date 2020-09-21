@@ -9,9 +9,15 @@
     border: 2px solid rgb(0, 0, 0);
     transform: rotateY(180deg);
     z-index: 3;
-    opacity: .75;
+    opacity: .6;
     position: absolute;
     top: 0;
+}
+
+#curl-element{
+    max-width: 500px;
+    display: flex;
+    justify-content: start;
 }
 
 .text-overlay{
@@ -19,6 +25,11 @@
     position: absolute;
     opacity: 0.7;
     z-index: 4;
+}
+
+#text-performance-overlay{
+    display: flex;
+    justify-content: center;
 }
 
 .main{
@@ -31,9 +42,14 @@
 
 .exercise-options{
     margin-top: 10px;
+    border: 1px solid #222;
     display: flex;
     flex-direction: column;
-    transition: all 200ms ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+
+.exercise-options:hover{
+    box-shadow: 0 2px 2px #555;
 }
 
 .exercise-options.active{
@@ -41,17 +57,30 @@
 }
 
 #instruction-box{
-    margin: 10px 14px;
+    margin: 10px 0;
+}
+
+#form-coach{
+    margin: 10px 0;
+    width: 100%;
     max-width: 642px;
     border: .8px solid rgba(0,0,0,0.7);
     border-radius: 5px;
 }
 
-#instruction-box.correctForm{
+#form-coach-says{
+    padding: 5px 0 5px 10px;
+}
+
+#extensive-instruction{
+    padding: 5px 0 5px 10px;
+}
+
+#form-coach.correctForm{
     background-color: rgba(53, 228, 105, 0.3);
 }
 
-#instruction-box.wrongForm{
+#form-coach.wrongForm{
     background-color: rgba(232,50, 60,0.3);
     animation: vibrate 1.2s cubic-bezier(.36,.09,.18,.90);
     /* animation-iteration-count: infinite; */
@@ -85,29 +114,180 @@
     width: 100%;
 }
 
-#tutorial-overlay{
+#finish-workout{
+    width: fit-content;
+}
+
+#performance-overlay{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 88;
-    background-color: rgba(110, 110, 110, 0.5);
+    background-color: rgba(207, 207, 207,0.8);
     backdrop-filter: blur(6px);
 }
 
-#tutorial-box{
-    width: 60%;
-    height: 70%;
-    /* position: absolute; */
+#performance-box{
+    width: 85%;
+    height: 85%;
     background-color: #fff;
     box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 
                 0 0 0 #000,
                 0.3em 0.3em 1em rgba(0,0,0,0.3);
     border-radius: 5px;
-    margin: 5% auto 0 auto;
+    margin: 30px auto;
 }
 
-#close-tutorial-overlay{
+#close-performance-overlay{
     float: right;
+}
+
+#header-performance-overlay{
+    display: flex;
+    justify-content: center;
+}
+
+#finish-workout{
+    background-color: rgb(66, 159, 175);
+    color: #fff;
+}
+
+#svg{
+    display: flex;
+    justify-items: center;
+}
+
+#tut-graph, #overall-graph{
+    width: fit-content;
+}
+
+.tick line{
+    stroke: rgb(146, 146, 146);
+}
+
+.disable{
+    background-color: rgb(218, 74, 74) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.disable:hover{
+    background-color: rgb(206, 57, 57) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    cursor: not-allowed;
+}
+
+.areaTUT{
+    animation: opacityalter 1.7s linear .5s;
+}
+
+@keyframes opacityalter{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.075;
+    }
+    75%{
+        opacity: 0.197;
+    }
+    100%{
+        opacity: 0.3 !important;
+    }
+}
+
+#color-score{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#description-score{
+    display: flex;
+    justify-content: center;
+}
+
+.desc-score{
+    width: 115px;
+    display: flex;
+    justify-content: center;
+    /* margin-top: 5px; */
+}
+
+#above9-score{
+    width: 115px;
+    height: 20px;
+    background-color: #00DC59;
+    box-shadow: 1px 2px 2px #aaa;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 0;
+}
+
+#above8-score{
+    width: 115px;
+    height: 20px;
+    background-color:#67C53A;
+    box-shadow: 0 2px 2px #aaa;
+    margin: 0;
+}
+
+#below2-score{
+    width: 115px;
+    height: 20px;
+    background-color: #EA4E00;
+    box-shadow: 0 2px 2px #aaa;
+    margin: 0;
+}
+
+#below1-score{
+    width: 115px;
+    height: 20px;
+    background-color: #D50F0F;
+    box-shadow: 1px 2px 2px #aaa;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0;
+}
+
+.tooltip{
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    background-color: #86d7e6;
+    box-shadow: 0 2px 2px #aaa;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0;
+}
+
+.tooltip2{
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    background-color: rgb(132, 130, 228);
+    box-shadow: 0 2px 2px #aaa;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0;
+    z-index: 5000;
+}
+
+.average-performance-score{
+    animation: delayscore .5s ease-in 1.7s;
+}
+
+@keyframes delayscore{
+    0%{
+        transform: translate(-10px,0) scale(.2,.2);
+    }
+    50%{
+        transform: translate(-3px,0) scale(.5,.5);
+        opacity:0.5;
+    }
+    100%{
+        transform: translate(0,0) scale(1,1);
+        opacity: 1 !important;
+    }
 }
