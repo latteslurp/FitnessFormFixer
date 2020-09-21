@@ -6,6 +6,6 @@ Following that, you can see how well (or not so well) you performed once you "fi
 Current exercises (features) available:
 - curl (bicep curl)
 
-Features currently under development:
+Features coming soon:
 - press up/ push up
 - squat
