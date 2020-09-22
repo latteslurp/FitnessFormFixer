@@ -275,7 +275,7 @@
 }
 
 .average-performance-score{
-    animation: delayscore .5s ease-in 1.7s;
+    animation: delayscore .5s ease-in 0s;
 }
 
 @keyframes delayscore{

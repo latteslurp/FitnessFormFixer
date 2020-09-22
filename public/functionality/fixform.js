@@ -541,6 +541,7 @@ function visualizeAfterWorkoutFinished(){
                     negCount++;
                 }
             }
+            else continue;
         }
         sumPerformanceAvg = (positive/posCount) + (negative/negCount);
         // console.log('performanceAvg: ',performanceAverage);
@@ -634,7 +635,7 @@ function visualizeAfterWorkoutFinished(){
                     .text('Overall Performance')
 
         //score text
-        svgOverall.append('text')
+        const scoreText = svgOverall.append('text')
                     .attr('x', 0)
                     .attr('y', 2)
                     .attr('opacity', 0)
@@ -644,7 +645,8 @@ function visualizeAfterWorkoutFinished(){
                     .style('font-size', '1.7em')
                     .text(average)
                     .classed('average-performance-score', true)
-                    .attr('opacity', 1);
+                    
+        scoreText.attr('opacity', 1);
                     
         // reset ongoing workout to no workout
         instruction = defaultInstruction;
