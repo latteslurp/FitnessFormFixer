@@ -179,7 +179,7 @@
 }
 
 .areaTUT{
-    animation: opacityalter 1.7s linear .5s;
+    animation: opacityalter 1.7s linear 0s;
 }
 
 @keyframes opacityalter{
@@ -275,7 +275,7 @@
 }
 
 .average-performance-score{
-    animation: delayscore .5s ease-in 0s;
+    animation: delayscore 1s ease-in 0s;
 }
 
 @keyframes delayscore{
