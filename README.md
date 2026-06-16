@@ -1,11 +1,14 @@
 # Welcome to FitnessFormFixer
-As the title implies, this a fitness form fixer app! The app offers various exercises to pick from to judge your form on a particular exercise, having your whole body points (e.g shoulder point, elbow, etc.) as an input through accessing device's live webcam. The app will make a prediction accordingly based on the app pre-trained model, which is a neural network classification model. 
 
-Following that, you can see how well (or not so well) you performed once you "finished" your workout. We will have your Time Under Tension (TUT) and overall performance analyzed real-time as you go through the workout! 
+This is a real-time web application form coach designed to optimize weightlifting execution and prevent injury. By leveraging computer vision directly through the user's webcam, the app maps key biomechanical tracking points (shoulders, elbows, knees, etc.) to analyze movement mechanics as they happen.
+
+Using a custom-trained neural network classification model, the application evaluates your posture against proper exercise mechanics, providing instantaneous feedback across a variety of selectable movements.
+
+Once your set is complete, the app delivers a comprehensive performance breakdown, featuring key metrics like Time Under Tension (TUT) and real-time biometric tracking to help you refine your technique and train smarter.
 
 Current exercises (features) available:
-- curl (bicep curl)
+- Bicep curl
 
-Features coming soon:
-- press up/ push up
-- squat
+Upcoming features:
+- Bench press
+- Squat
